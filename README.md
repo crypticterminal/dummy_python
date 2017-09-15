@@ -204,3 +204,13 @@ The following command writes "Hello World!" to the console output
 
 print "Hello World!"
 ```
+
+### Catching exceptions
+
+* Running some code while expecting that it could fail:
+
+try:
+    a = 1 / 0
+except Exception, msg:
+    print "[x] something went wrong ('%s')" % msg
+    
