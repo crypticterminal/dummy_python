@@ -18,8 +18,36 @@ print "Hello World!"
 * Write `Hello World!` to a file `test.txt` inside current directory:
 
 ```
-with open("test.txt") as f:
+with open("test.txt", "w+") as f:
     f.write("Hello World!")
+```
+
+### `open()/read()`
+
+* Read content of file `test.txt` inside current directory and store it to a variable `value`:
+
+```
+with open("test.txt", "r") as f:
+    value = f.read()
+```
+
+### `raw_input()`
+
+* Read user provided string from keyboard and store it to a variable `value`:
+
+```
+value = raw_input()
+```
+
+### User function
+
+* Create a function which will take two (string) parameters and return result of concatenation:
+
+```
+def concat(a, b):
+    return a + b
+
+c = concat("foo", "bar")
 ```
 
 ## Level: Medium
