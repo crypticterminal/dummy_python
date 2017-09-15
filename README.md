@@ -24,21 +24,21 @@ print "Hello World!"  # This is that line
 
 ### `open()/write()`
 
-* Write `Hello World!` to a file `test.txt` inside current directory:
+* Write `Hello World!` to a file `dummy.txt` inside current directory:
 
 ```
-with open("test.txt", "w") as f:
+with open("dummy.txt", "w") as f:
     f.write("Hello World!")
 ```
 
-Note: String value `"w"` represents an open file "mode". Use `w` when writing, `r` when reading, etc. More can be found [here](https://docs.python.org/2/tutorial/inputoutput.html#reading-and-writing-files)
+Note: String value `"w"` represents an open file "mode". Use `w` when writing, `r` when reading, etc. More can be found [here](https://docs.python.org/2/tutorial/inputoutput.html#reading-and-writing-files).
 
 ### `open()/read()`
 
-* Read content of file `test.txt` inside current directory and store it to a variable `value`:
+* Read content of file `dummy.txt` inside current directory and store it to a variable `value`:
 
 ```
-with open("test.txt", "r") as f:
+with open("dummy.txt", "r") as f:
     value = f.read()
 ```
 
@@ -81,6 +81,16 @@ for i in xrange(0, 10):
 
 Note: You should prefer usage of `xrange()` over `range()` because of lower memory consumption. More can be found [here](http://pythoncentral.io/how-to-use-pythons-xrange-and-range/).
 
+### While loop
+
+* Print out all numbers from 0 to 9:
+
+```
+i = 0
+while i < 10:
+    print i
+```
+
 ## Level: Medium
 
 ### `sys.stdout`
@@ -91,6 +101,17 @@ Note: You should prefer usage of `xrange()` over `range()` because of lower memo
 import sys
 sys.stdout.write("Hello World!")
 ```
+
+### Write binary content to a file
+
+* Write `Hello World!` to a binary file `dummy.raw` inside current directory:
+
+```
+with open("dummy.raw", "wb") as f:
+    f.write("Hello World!")
+```
+
+Note: Use binary file mode appendix `b` when dealing with raw non-textual content as Python accross different operating systems tends to use different newline representations. More can be found [here](https://docs.python.org/2/tutorial/inputoutput.html#reading-and-writing-files).
 
 ### Multi-line comment
 
