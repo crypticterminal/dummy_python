@@ -91,6 +91,67 @@ while i < 10:
     print i
 ```
 
+### List `list()/[]`
+
+* Store all numbers from 0 to 9 to a list `numbers`:
+
+```
+numbers = []  # shorter for list()
+
+for i in xrange(10):
+    numbers.append(i)
+```
+
+or:
+
+```
+numbers = range(10)
+```
+
+or (by using one-liner "iterator"):
+
+```
+numbers = [i for i in xrange(10)]
+```
+
+### Dictionary `dict()/{}`
+
+* Store all numbers from 0 to 9, along with english related cardinal, to a dictionary `numbers`:
+
+```
+numbers = {}  # shorter for dict()
+
+numbers[0] = "zero"
+numbers[1] = "one"
+numbers[2] = "two"
+numbers[3] = "three"
+numbers[4] = "four"
+numbers[5] = "five"
+numbers[6] = "six"
+numbers[7] = "seven"
+numbers[8] = "eight"
+numbers[9] = "nine"
+```
+
+or just:
+
+```
+numbers = {0: "zero", 1: "one", 2: "two", 3: "three", 4: "four", 5: "five", 6: "six", 7: "seven", 8: "eight", 9: "nine"}
+```
+
+### Set `set()`
+
+* Store all numbers from 0 to 9 to a set `numbers`:
+
+```
+numbers = set()
+
+for i in xrange(10):
+    numbers.add(i)
+```
+
+Note: Difference between a list and a set is that list has (all) elements stored in order of appending new elements, while set stores unique values in no particular order
+
 ## Level: Medium
 
 ### `sys.stdout`
