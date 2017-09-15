@@ -13,6 +13,15 @@ Repository of "dummy" python code snippets that should help the newcomers in Pyt
 print "Hello World!"
 ```
 
+### Single-line comment
+
+* Add single-line comments inside the code:
+
+```
+# The following command writes "Hello World!" to the console output
+print "Hello World!"  # This is that line
+```
+
 ### `open()/write()`
 
 * Write `Hello World!` to a file `test.txt` inside current directory:
@@ -59,4 +68,18 @@ c = concat("foo", "bar")
 ```
 import sys
 sys.stdout.write("Hello World!")
+```
+
+### Multi-line comment
+
+* Add multi-line comments inside the code:
+
+```
+"""
+This is a multi-line comment:
+
+The following command writes "Hello World!" to the console output
+"""
+
+print "Hello World!"  # This is that line
 ```
