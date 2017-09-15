@@ -5,6 +5,23 @@ Repository of "dummy" python code snippets that should help the newcomers in Pyt
 
 # Code Snippets
 ## Level: Easy
+
+### Variable
+
+* Put string `Hello World!` to the variable `value`:
+
+```
+value = "Hello World!"
+```
+
+or
+
+```
+value = 'Hello World!'
+```
+
+Note: Some people prefer usage of `'` for delimiting single character values, while `"` for all other multi character values
+
 ### `print`
 
 * Write `Hello World!` to the console output:
@@ -70,7 +87,7 @@ import math
 print math.cos(math.pi)
 ```
 
-### For loop
+### For-loop
 
 * Print out all numbers from 0 to 9:
 
@@ -81,7 +98,7 @@ for i in xrange(0, 10):
 
 Note: You should prefer usage of `xrange()` over `range()` because of lower memory consumption. More can be found [here](http://pythoncentral.io/how-to-use-pythons-xrange-and-range/).
 
-### While loop
+### While-loop
 
 * Print out all numbers from 0 to 9:
 
@@ -91,7 +108,7 @@ while i < 10:
     print i
 ```
 
-### List `list()/[]`
+### `list()/[]`
 
 * Store all numbers from 0 to 9 to a list `numbers`:
 
@@ -114,7 +131,7 @@ or (by using one-liner "iterator"):
 numbers = [i for i in xrange(10)]
 ```
 
-### Dictionary `dict()/{}`
+### `dict()/{}`
 
 * Store all numbers from 0 to 9, along with english related cardinal, to a dictionary `numbers`:
 
@@ -139,7 +156,7 @@ or just:
 numbers = {0: "zero", 1: "one", 2: "two", 3: "three", 4: "four", 5: "five", 6: "six", 7: "seven", 8: "eight", 9: "nine"}
 ```
 
-### Set `set()`
+### `set()`
 
 * Store all numbers from 0 to 9 to a set `numbers`:
 
