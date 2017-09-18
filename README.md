@@ -11,8 +11,8 @@
     + [`raw_input()`](#raw_input)
     + [`def` user-function](#def-user-function)
     + [`import` module](#import-module)
-    + [`for`- loop](#for-loop)
-    + [`while`- loop](#while-loop)
+    + [`for` loop](#for-loop)
+    + [`while` loop](#while-loop)
     + [`list()/[]`](#list)
     + [`dict()/{}`](#dict)
     + [`set()`](#set)
@@ -135,7 +135,7 @@ print math.cos(math.pi)
 
 
 
-* ### `for`-loop
+* ### `for` loop
 
 Print out all numbers from 0 to 9:
 
@@ -148,7 +148,7 @@ Note: You should prefer usage of `xrange()` over `range()` because of lower memo
 
 
 
-* ### `while`-loop
+* ### `while` loop
 
 Print out all numbers from 0 to 9:
 
