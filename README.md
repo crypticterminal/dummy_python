@@ -22,6 +22,8 @@ value = 'Hello World!'
 
 Note: Some people prefer usage of `'` for delimiting single character values, while `"` for all other multi character values
 
+---
+
 ### `print`
 
 * Write `Hello World!` to the console output:
