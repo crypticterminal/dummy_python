@@ -9,10 +9,10 @@
     + [`open()/write()`](#openwrite)
     + [`open()/read()`](#openread)
     + [`raw_input()`](#raw_input)
-    + [`def` user function](#defuser-function)
+    + [`def` user-function](#def-user-function)
     + [`import` module](#import-module)
-    + [`for`-loop](#for-loop)
-    + [`while`-loop](#while-loop)
+    + [`for`- loop](#for-loop)
+    + [`while`- loop](#while-loop)
     + [`list()/[]`](#list)
     + [`dict()/{}`](#dict)
     + [`set()`](#set)
@@ -111,7 +111,7 @@ value = raw_input()
 
 
 
-* ### `def` user function
+* ### `def` user-function
 
 Create a function which will take two (string) parameters and return result of concatenation:
 
