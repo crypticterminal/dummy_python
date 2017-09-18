@@ -216,3 +216,45 @@ except Exception, msg:
     print "[x] something went wrong ('%s')" % msg
 ```
 
+### `any()`
+
+* Enter two numbers `a` and `b` and check if any of conditions `a > 17`, `a == b`, `a == b * 3` is satisfied:
+
+```
+a = int(raw_input("a = "))
+b = int(raw_input("b = "))
+print "Any condition is satisfied: %s" % any((a > 17, a == b, a == b * 3))
+```
+
+### `all()`
+
+* Enter two numbers `a` and `b` and check if all conditions `a > 17`, `a == b`, `a == b * 3` are satisfied:
+
+```
+a = int(raw_input("a = "))
+b = int(raw_input("b = "))
+print "All conditions are satisfied: %s" % all((a > 17, a == b, a == b * 3))
+```
+
+### `filter()`
+
+* Remova all `None` values from a list `[1, 2, 3, None, 4, None, 5]`:
+
+```
+values = [1, 2, 3, None, 4, None, 5]
+filtered = filter(lambda _: _ is not None, values)
+```
+
+or:
+
+```
+values = [1, 2, 3, None, 4, None, 5]
+filtered = filter(None, values)
+```
+
+or just:
+
+```
+values = [1, 2, 3, None, 4, None, 5]
+filtered = [_ for _ in values if _ is not None]
+```
