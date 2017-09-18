@@ -6,9 +6,9 @@ Repository of "dummy" Python (v2) code snippets that should help the newcomers t
 # Code Snippets
 ## Level: Easy
 
-### Variable
+* ### Variable
 
-* Put string `Hello World!` to the variable `value`:
+Put string `Hello World!` to the variable `value`:
 
 ```
 value = "Hello World!"
@@ -24,9 +24,9 @@ Note: Some people prefer usage of `'` for delimiting single character values, wh
 
 ---
 
-### `print`
+* ### `print`
 
-* Write `Hello World!` to the console output:
+Write `Hello World!` to the console output:
 
 ```
 print "Hello World!"
@@ -34,9 +34,9 @@ print "Hello World!"
 
 ---
 
-### Single-line comment
+* ### Single-line comment
 
-* Add single-line comments inside the code:
+Add single-line comments inside the code:
 
 ```
 # The following command writes "Hello World!" to the console output
@@ -45,9 +45,9 @@ print "Hello World!"  # This is that line
 
 ---
 
-### `open()/write()`
+* ### `open()/write()`
 
-* Write `Hello World!` to a file `dummy.txt` inside current directory:
+Write `Hello World!` to a file `dummy.txt` inside current directory:
 
 ```
 with open("dummy.txt", "w") as f:
@@ -58,9 +58,9 @@ Note: String value `"w"` represents an open file "mode". Use `w` when writing, `
 
 ---
 
-### `open()/read()`
+* ### `open()/read()`
 
-* Read content of file `dummy.txt` inside current directory and store it to a variable `value`:
+Read content of file `dummy.txt` inside current directory and store it to a variable `value`:
 
 ```
 with open("dummy.txt", "r") as f:
@@ -69,9 +69,9 @@ with open("dummy.txt", "r") as f:
 
 ---
 
-### `raw_input()`
+* ### `raw_input()`
 
-* Read user provided string from keyboard and store it to a variable `value`:
+Read user provided string from keyboard and store it to a variable `value`:
 
 ```
 value = raw_input()
@@ -79,9 +79,9 @@ value = raw_input()
 
 ---
 
-### User function
+* ### User function
 
-* Create a function which will take two (string) parameters and return result of concatenation:
+Create a function which will take two (string) parameters and return result of concatenation:
 
 ```
 def concat(a, b):
@@ -92,9 +92,9 @@ c = concat("foo", "bar")
 
 ---
 
-### Import module
+* ### Import module
 
-* Import standard module [`math`](https://docs.python.org/2/library/math.html) and print result of `math.cos(math.pi)`:
+Import standard module [`math`](https://docs.python.org/2/library/math.html) and print result of `math.cos(math.pi)`:
 
 ```
 import math
@@ -103,9 +103,9 @@ print math.cos(math.pi)
 
 ---
 
-### For-loop
+* ### For-loop
 
-* Print out all numbers from 0 to 9:
+Print out all numbers from 0 to 9:
 
 ```
 for i in xrange(0, 10):
@@ -116,9 +116,9 @@ Note: You should prefer usage of `xrange()` over `range()` because of lower memo
 
 ---
 
-### While-loop
+* ### While-loop
 
-* Print out all numbers from 0 to 9:
+Print out all numbers from 0 to 9:
 
 ```
 i = 0
@@ -128,9 +128,9 @@ while i < 10:
 
 ---
 
-### `list()/[]`
+* ### `list()/[]`
 
-* Store all numbers from 0 to 9 to a list `numbers`:
+Store all numbers from 0 to 9 to a list `numbers`:
 
 ```
 numbers = []  # shorter for list()
@@ -153,9 +153,9 @@ numbers = [i for i in xrange(10)]
 
 ---
 
-### `dict()/{}`
+* ### `dict()/{}`
 
-* Store all numbers from 0 to 9, along with english related cardinal, to a dictionary `numbers`:
+Store all numbers from 0 to 9, along with english related cardinal, to a dictionary `numbers`:
 
 ```
 numbers = {}  # shorter for dict()
@@ -180,9 +180,9 @@ numbers = {0: "zero", 1: "one", 2: "two", 3: "three", 4: "four", 5: "five", 6: "
 
 ---
 
-### `set()`
+* ### `set()`
 
-* Store all numbers from 0 to 9 to a set `numbers`:
+Store all numbers from 0 to 9 to a set `numbers`:
 
 ```
 numbers = set()
@@ -195,9 +195,9 @@ Note: Difference between a list and a set is that list has (all) elements stored
 
 ---
 
-### `tuple()`
+* ### `tuple()`
 
-* Store all numbers from 0 to 9 to a tuple `numbers`:
+Store all numbers from 0 to 9 to a tuple `numbers`:
 
 ```
 numbers = tuple(xrange(10))
@@ -213,9 +213,9 @@ Note: Difference between a list and a tuple is that list can be changed, while t
 
 ## Level: Medium
 
-### `sys.stdout`
+* ### `sys.stdout`
 
-* Write `Hello World!` to the standard console output:
+Write `Hello World!` to the standard console output:
 
 ```
 import sys
@@ -224,9 +224,9 @@ sys.stdout.write("Hello World!")
 
 ---
 
-### Write binary content to a file
+* ### Write binary content to a file
 
-* Write `Hello World!` to a binary file `dummy.raw` inside current directory:
+Write `Hello World!` to a binary file `dummy.raw` inside current directory:
 
 ```
 with open("dummy.raw", "wb") as f:
@@ -237,9 +237,9 @@ Note: Use binary file mode appendix `b` when dealing with raw non-textual conten
 
 ---
 
-### Multi-line comment
+* ### Multi-line comment
 
-* Add multi-line comments inside the code:
+Add multi-line comments inside the code:
 
 ```
 """
@@ -253,9 +253,9 @@ print "Hello World!"
 
 ---
 
-### Catching exceptions
+* ### Catching exceptions
 
-* Running some code while expecting that something could go wrong:
+Running some code while expecting that something could go wrong:
 
 ```
 try:
@@ -266,33 +266,33 @@ except Exception, msg:
 
 ---
 
-### `any()`
+* ### `any()`
 
-* Enter two numbers `a` and `b` and check if any of conditions `a > 17`, `a == b`, `a == b * 3` is satisfied:
-
-```
-a = int(raw_input("a = "))
-b = int(raw_input("b = "))
-print "Any condition is satisfied: %s" % any((a > 17, a == b, a == b * 3))
-```
-
----
-
-### `all()`
-
-* Enter two numbers `a` and `b` and check if all conditions `a > 17`, `a == b`, `a == b * 3` are satisfied:
+Enter two numbers `a` and `b` and check if any of conditions `a > 17`, `a == b`, `a == b 3` is satisfied:
 
 ```
 a = int(raw_input("a = "))
 b = int(raw_input("b = "))
-print "All conditions are satisfied: %s" % all((a > 17, a == b, a == b * 3))
+print "Any condition is satisfied: %s" % any((a > 17, a == b, a == b 3))
 ```
 
 ---
 
-### `filter()`
+* ### `all()`
 
-* Remova all `None` values from a list `[1, 2, 3, None, 4, None, 5]`:
+Enter two numbers `a` and `b` and check if all conditions `a > 17`, `a == b`, `a == b 3` are satisfied:
+
+```
+a = int(raw_input("a = "))
+b = int(raw_input("b = "))
+print "All conditions are satisfied: %s" % all((a > 17, a == b, a == b 3))
+```
+
+---
+
+* ### `filter()`
+
+Remove all `None` values from a list `[1, 2, 3, None, 4, None, 5]`:
 
 ```
 values = [1, 2, 3, None, 4, None, 5]
