@@ -342,3 +342,30 @@ or just:
 values = [1, 2, 3, None, 4, None, 5]
 filtered = [_ for _ in values if _ is not None]
 ```
+
+* ### Read HTTP(s) page content
+
+Retrieve page content from [https://ifconfig.co/ip](https://ifconfig.co/ip) and print it to the console output:
+
+```
+import urllib2
+req = urllib2.Request("https://ifconfig.co/ip")
+content = urllib2.urlopen(req).read()
+print "Your Internet IP address is: ", content
+```
+
+* ### Extract all regular expression results
+
+Retrieve all `<title>...</title>` tags from [https://feeds.feedburner.com/d0od](https://feeds.feedburner.com/d0od) and print their inner-textual content to the console output:
+
+```
+import re
+import urllib2
+req = urllib2.Request("https://feeds.feedburner.com/d0od")
+content = urllib2.urlopen(req).read()
+titles = re.findall(r"<title>([^<]+)", content)
+print "All headlines: "
+for title in titles:
+    if title != "OMG! Ubuntu!":  # default title
+        print '* "%s"' % title
+```
