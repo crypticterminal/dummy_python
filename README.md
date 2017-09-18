@@ -1,3 +1,31 @@
+# Table of contents
+
+- [Introduction](#introduction)
+- [Code Snippets](#code-snippets)
+  * [Level: Easy](#level--easy)
+    + [Variable](#variable)
+    + [`print`](#-print-)
+    + [Single-line comment](#single-line-comment)
+    + [`open()/write()`](#-open---write---)
+    + [`open()/read()`](#-open---read---)
+    + [`raw_input()`](#-raw-input---)
+    + [User function](#user-function)
+    + [Import module](#import-module)
+    + [For-loop](#for-loop)
+    + [While-loop](#while-loop)
+    + [`list()/[]`](#-list------)
+    + [`dict()/{}`](#-dict------)
+    + [`set()`](#-set---)
+    + [`tuple()`](#-tuple---)
+  * [Level: Medium](#level--medium)
+    + [`sys.stdout`](#-sysstdout-)
+    + [Write binary content to a file](#write-binary-content-to-a-file)
+    + [Multi-line comment](#multi-line-comment)
+    + [Catching exceptions](#catching-exceptions)
+    + [`any()`](#-any---)
+    + [`all()`](#-all---)
+    + [`filter()`](#-filter---)
+
 # Introduction
 
 Repository of "dummy" Python (v2) code snippets that should help the newcomers to learn it the easy way
