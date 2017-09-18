@@ -1,6 +1,6 @@
 # Introduction
 
-Repository of "dummy" python code snippets that should help the newcomers in Python to learn it the easy way
+Repository of "dummy" Python (v2) code snippets that should help the newcomers to learn it the easy way
 
 
 # Code Snippets
@@ -168,6 +168,22 @@ for i in xrange(10):
 ```
 
 Note: Difference between a list and a set is that list has (all) elements stored in order of appending new elements, while set stores unique values in no particular order
+
+### `tuple()`
+
+* Store all numbers from 0 to 9 to a tuple `numbers`:
+
+```
+numbers = tuple(xrange(10))
+```
+
+or:
+
+```
+numbers = (0, 1, 2, 3, 4, 5, 6, 7, 8, 9)
+```
+
+Note: Difference between a list and a tuple is that list can be changed, while tuple can't (immutable). In theory, tuple should consume less memory
 
 ## Level: Medium
 
