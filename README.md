@@ -2,7 +2,7 @@
 
 - [Introduction](#introduction)
 - [Code Snippets](#code-snippets)
-  * [Level: Easy](#leveleasy)
+  * [Level: Easy](#level-easy)
     + [Variable](#variable)
     + [`print`](#print)
     + [Single-line comment](#single-line-comment)
@@ -17,7 +17,7 @@
     + [`dict()/{}`](#dict)
     + [`set()`](#set)
     + [`tuple()`](#tuple)
-  * [Level: Medium](#levelmedium)
+  * [Level: Medium](#level-medium)
     + [`sys.stdout`](#sysstdout)
     + [Write binary content to a file](#write-binary-content-to-a-file)
     + [Multi-line comment](#multi-line-comment)
