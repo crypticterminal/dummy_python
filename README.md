@@ -9,10 +9,10 @@
     + [`open()/write()`](#openwrite)
     + [`open()/read()`](#openread)
     + [`raw_input()`](#raw_input)
-    + [User function](#user-function)
-    + [Import module](#import-module)
-    + [For-loop](#for-loop)
-    + [While-loop](#while-loop)
+    + [`def` user function](#defuser-function)
+    + [`import` module](#import-module)
+    + [`for`-loop](#for-loop)
+    + [`while`-loop](#while-loop)
     + [`list()/[]`](#list)
     + [`dict()/{}`](#dict)
     + [`set()`](#set)
@@ -25,8 +25,10 @@
     + [`any()`](#any)
     + [`all()`](#all)
     + [`filter()`](#filter)
+    + [Read HTTP(s) page content](#read-https-page-content)
+    + [Extract all regular expression results](#extract-all-regular-expression-results)
 
-<!-- Generated with: https://ecotrust-canada.github.io/markdown-toc/ -->
+<!-- TOC generated with: https://ecotrust-canada.github.io/markdown-toc/ -->
 
 # Introduction
 
@@ -109,7 +111,7 @@ value = raw_input()
 
 
 
-* ### User function
+* ### `def` user function
 
 Create a function which will take two (string) parameters and return result of concatenation:
 
@@ -122,7 +124,7 @@ c = concat("foo", "bar")
 
 
 
-* ### Import module
+* ### `import` module
 
 Import standard module [`math`](https://docs.python.org/2/library/math.html) and print result of `math.cos(math.pi)`:
 
@@ -133,7 +135,7 @@ print math.cos(math.pi)
 
 
 
-* ### For-loop
+* ### `for`-loop
 
 Print out all numbers from 0 to 9:
 
@@ -146,7 +148,7 @@ Note: You should prefer usage of `xrange()` over `range()` because of lower memo
 
 
 
-* ### While-loop
+* ### `while`-loop
 
 Print out all numbers from 0 to 9:
 
