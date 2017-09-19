@@ -54,8 +54,6 @@ value = 'Hello World!'
 
 Note: Some people prefer usage of `'` for delimiting single character values, while `"` for all other multi character values
 
-
-
 * ### `print`
 
 Write `Hello World!` to the console output:
@@ -64,7 +62,31 @@ Write `Hello World!` to the console output:
 print "Hello World!"
 ```
 
+* ### Basic string manipulations
 
+Write concatenation of strings "foo" and "bar" to the console output:
+
+```
+print "foo" + "bar"
+```
+
+or:
+
+```
+print "%s%s" % ("foo", "bar")
+```
+
+Write upper-cased form of string "foobar" to the console output:
+
+```
+print "foobar".upper()
+```
+
+Write string "foobar" in reverse order to the console output:
+
+```
+print "foobar"[::-1]
+```
 
 * ### Single-line comment
 
@@ -158,6 +180,26 @@ while i < 10:
     print i
 ```
 
+* ### `if` statement
+
+Read user provided integer and print out whether it is odd or even:
+
+```
+value = int(raw_input("value = "))
+
+if value % 2 == 0:
+    print "even"
+else:
+    print "odd"
+```
+
+or
+
+
+```
+value = int(raw_input("value = "))
+print "even" if value % 2 == 0 else "odd"
+```
 
 
 * ### `list()/[]`
