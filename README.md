@@ -1,39 +1,8 @@
-# Table of contents
-
-- [Introduction](#introduction)
-- [Code Snippets](#code-snippets)
-  * [Level: Easy](#level-easy)
-    + [Variable](#variable)
-    + [`print`](#print)
-    + [Single-line comment](#single-line-comment)
-    + [`open()/write()`](#openwrite)
-    + [`open()/read()`](#openread)
-    + [`raw_input()`](#raw_input)
-    + [`def` user-function](#def-user-function)
-    + [`import` module](#import-module)
-    + [`for` loop](#for-loop)
-    + [`while` loop](#while-loop)
-    + [`list()/[]`](#list)
-    + [`dict()/{}`](#dict)
-    + [`set()`](#set)
-    + [`tuple()`](#tuple)
-  * [Level: Medium](#level-medium)
-    + [`sys.stdout`](#sysstdout)
-    + [Write binary content to a file](#write-binary-content-to-a-file)
-    + [Multi-line comment](#multi-line-comment)
-    + [Catching exceptions](#catching-exceptions)
-    + [`any()`](#any)
-    + [`all()`](#all)
-    + [`filter()`](#filter)
-    + [Read HTTP(s) page content](#read-https-page-content)
-    + [Extract all regular expression results](#extract-all-regular-expression-results)
-
 <!-- TOC generated with: https://ecotrust-canada.github.io/markdown-toc/ -->
 
 # Introduction
 
-Repository of "dummy" Python (v2) code snippets that should help the newcomers to learn it the easy way
-
+Repository of "dummy" Python (v2) code snippets that should help the newcomers to learn it the easy way. You can download Python [here](https://www.python.org/downloads/) or run it online [here](https://repl.it/languages/python).
 
 # Code Snippets
 ## Level: Easy
@@ -98,7 +67,6 @@ print "Hello World!"  # This is that line
 ```
 
 
-
 * ### `open()/write()`
 
 Write `Hello World!` to a file `dummy.txt` inside current directory:
@@ -111,7 +79,6 @@ with open("dummy.txt", "w") as f:
 Note: String value `"w"` represents an open file "mode". Use `w` when writing, `r` when reading, etc. More can be found [here](https://docs.python.org/2/tutorial/inputoutput.html#reading-and-writing-files).
 
 
-
 * ### `open()/read()`
 
 Read content of file `dummy.txt` inside current directory and store it to a variable `value`:
@@ -122,7 +89,6 @@ with open("dummy.txt", "r") as f:
 ```
 
 
-
 * ### `raw_input()`
 
 Read user provided string from keyboard and store it to a variable `value`:
@@ -130,7 +96,6 @@ Read user provided string from keyboard and store it to a variable `value`:
 ```
 value = raw_input()
 ```
-
 
 
 * ### `def` user-function
@@ -145,7 +110,6 @@ c = concat("foo", "bar")
 ```
 
 
-
 * ### `import` module
 
 Import standard module [`math`](https://docs.python.org/2/library/math.html) and print result of `math.cos(math.pi)`:
@@ -154,7 +118,6 @@ Import standard module [`math`](https://docs.python.org/2/library/math.html) and
 import math
 print math.cos(math.pi)
 ```
-
 
 
 * ### `for` loop
@@ -167,7 +130,6 @@ for i in xrange(0, 10):
 ```
 
 Note: You should prefer usage of `xrange()` over `range()` because of lower memory consumption. More can be found [here](http://pythoncentral.io/how-to-use-pythons-xrange-and-range/).
-
 
 
 * ### `while` loop
@@ -195,12 +157,10 @@ else:
 
 or
 
-
 ```
 value = int(raw_input("value = "))
 print "even" if value % 2 == 0 else "odd"
 ```
-
 
 * ### `list()/[]`
 
@@ -224,7 +184,6 @@ or (by using one-liner "iterator"):
 ```
 numbers = [i for i in xrange(10)]
 ```
-
 
 
 * ### `dict()/{}`
@@ -253,7 +212,6 @@ numbers = {0: "zero", 1: "one", 2: "two", 3: "three", 4: "four", 5: "five", 6: "
 ```
 
 
-
 * ### `set()`
 
 Store all numbers from 0 to 9 to a set `numbers`:
@@ -266,7 +224,6 @@ for i in xrange(10):
 ```
 
 Note: Difference between a list and a set is that list has (all) elements stored in order of appending new elements, while set stores unique values in no particular order
-
 
 
 * ### `tuple()`
@@ -297,7 +254,6 @@ sys.stdout.write("Hello World!")
 ```
 
 
-
 * ### Write binary content to a file
 
 Write `Hello World!` to a binary file `dummy.raw` inside current directory:
@@ -308,7 +264,6 @@ with open("dummy.raw", "wb") as f:
 ```
 
 Note: Use binary file mode appendix `b` when dealing with raw non-textual content as Python accross different operating systems tends to use different newline representations. More can be found [here](https://docs.python.org/2/tutorial/inputoutput.html#reading-and-writing-files).
-
 
 
 * ### Multi-line comment
@@ -326,7 +281,6 @@ print "Hello World!"
 ```
 
 
-
 * ### Catching exceptions
 
 Running some code while expecting that something could go wrong:
@@ -336,8 +290,11 @@ try:
     a = 1 / 0
 except Exception, msg:
     print "[x] something went wrong ('%s')" % msg
+else:
+    print "[i] nothing went wrong
+finally:
+    print "[o] run at the end in any case"
 ```
-
 
 
 * ### `any()`
@@ -351,7 +308,6 @@ print "Any condition is satisfied: %s" % any((a > 17, a == b, a == b 3))
 ```
 
 
-
 * ### `all()`
 
 Enter two numbers `a` and `b` and check if all conditions `a > 17`, `a == b`, `a == b 3` are satisfied:
@@ -361,7 +317,6 @@ a = int(raw_input("a = "))
 b = int(raw_input("b = "))
 print "All conditions are satisfied: %s" % all((a > 17, a == b, a == b 3))
 ```
-
 
 
 * ### `filter()`
@@ -412,4 +367,24 @@ print "All headlines: "
 for title in titles:
     if title != "OMG! Ubuntu!":  # default title
         print '* "%s"' % title
+```
+
+* ### SQLite database
+
+Create SQLite database `storage`, having a table `data` with columns `timestamp` and `value`, filled with UNIX timestamp and user entered value:
+
+```
+import sqlite3
+import time
+
+connection = sqlite3.connect("storage.sqlite")
+cursor = connection.cursor()
+cursor.execute("CREATE TABLE IF NOT EXISTS data (timestamp INTEGER, value TEXT)")
+timestamp = int(time.time())
+
+value = raw_input("value = ")
+
+cursor.execute("INSERT INTO data VALUES (?, ?)", (timestamp, value))
+for row in cursor.execute("SELECT value FROM data ORDER BY timestamp DESC LIMIT 1"):
+    print "Last stored value: %s" % row[0]
 ```
