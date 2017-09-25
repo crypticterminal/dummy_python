@@ -365,6 +365,7 @@ import urllib2
 req = urllib2.Request("https://feeds.feedburner.com/d0od")
 content = urllib2.urlopen(req).read()
 titles = re.findall(r"<title>([^<]+)", content)
+
 print "All headlines: "
 for title in titles:
     if title != "OMG! Ubuntu!":  # default title
@@ -407,6 +408,5 @@ options, _ = parser.parse_args()
 if options.value:
     print "Result: %s" % ((options.count or 1) * options.value)
 else:
-    
     parser.print_help()
 ```
