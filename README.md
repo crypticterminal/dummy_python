@@ -281,7 +281,7 @@ print "Hello World!"
 ```
 
 
-* ### Catching exceptions
+* ### Catching exceptions (`try/except/else/finally`)
 
 Running some code while expecting that something could go wrong:
 
@@ -342,24 +342,26 @@ values = [1, 2, 3, None, 4, None, 5]
 filtered = [_ for _ in values if _ is not None]
 ```
 
-* ### Read HTTP(s) page content
+* ### Read HTTP(s) page content (`urllib2`)
 
 Retrieve page content from [https://ifconfig.co/ip](https://ifconfig.co/ip) and print it to the console output:
 
 ```
 import urllib2
+
 req = urllib2.Request("https://ifconfig.co/ip")
 content = urllib2.urlopen(req).read()
 print "Your Internet IP address is: ", content
 ```
 
-* ### Extract all regular expression results
+* ### Extract all regular expression results (`re`)
 
 Retrieve all `<title>...</title>` tags from [https://feeds.feedburner.com/d0od](https://feeds.feedburner.com/d0od) and print their inner-textual content to the console output:
 
 ```
 import re
 import urllib2
+
 req = urllib2.Request("https://feeds.feedburner.com/d0od")
 content = urllib2.urlopen(req).read()
 titles = re.findall(r"<title>([^<]+)", content)
@@ -369,7 +371,7 @@ for title in titles:
         print '* "%s"' % title
 ```
 
-* ### SQLite database
+* ### SQLite database (`sqlite3`)
 
 Create SQLite database `storage`, having a table `data` with columns `timestamp` and `value`, filled with UNIX timestamp and user entered value:
 
@@ -387,4 +389,24 @@ value = raw_input("value = ")
 cursor.execute("INSERT INTO data VALUES (?, ?)", (timestamp, value))
 for row in cursor.execute("SELECT value FROM data ORDER BY timestamp DESC LIMIT 1"):
     print "Last stored value: %s" % row[0]
+```
+
+
+* ### Program options (`optparse`)
+
+Create program which will take two options, `--value` and `--count` (optional), and will print out string value given by `--value` given number of `--count` times:
+
+```
+import optparse
+
+parser = optparse.OptionParser()
+parser.add_option("--value", dest="value", help="Value to print out")
+parser.add_option("--count", dest="count", type=int, help="Number of times to print out value (default: 1)")
+options, _ = parser.parse_args()
+
+if options.value:
+    print "Result: %s" % ((options.count or 1) * options.value)
+else:
+    
+    parser.print_help()
 ```
